@@ -1,0 +1,2535 @@
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #15130e;
+    color: white;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    background: rgba(21, 19, 14, 0.88);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* LOGO */
+
+.logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    direction: ltr;
+}
+
+.nav-links a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c79256;
+}
+
+
+/* =====================================================
+   HERO / HOME
+===================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-image: url("images/publicarea.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* DARK OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        );
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 40px;
+}
+
+
+/* IRAM TITLE */
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(70px, 10vw, 150px);
+
+    letter-spacing: 12px;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+/* SUBTITLE */
+
+.hero-content h2 {
+    font-size: 22px;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    color: #e4c39b;
+
+    margin-bottom: 25px;
+}
+
+
+/* DESCRIPTION */
+
+.hero-content p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #f1f1f1;
+}
+
+
+/* BUTTON */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 35px;
+
+    border: 1px solid #c79256;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-button:hover {
+    background: #c79256;
+
+    color: #15130e;
+}
+
+
+/* =====================================================
+   ABOUT IRAM
+===================================================== */
+
+.about-section {
+    background: #15130e;
+
+    color: #ffffff;
+
+    padding: 130px 8% 120px;
+}
+
+
+/* =====================================================
+   IRAM STORY
+===================================================== */
+
+.about-story {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 140px;
+
+    padding: 0 20px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   LARGE STORY IMAGE
+===================================================== */
+
+.story-image {
+    width: 100%;
+
+    height: 600px;
+
+    margin: 0 auto 50px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 35px;
+
+    background: #15130e;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.50),
+        0 0 0 1px rgba(199, 146, 86, 0.30);
+}
+
+
+/* Elegant inner frame */
+
+.story-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border: 1px solid rgba(199, 146, 86, 0.55);
+
+    border-radius: 25px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* Story image */
+
+.story-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+
+/* Story image hover */
+
+.story-image:hover img {
+    transform: scale(1.07);
+
+    filter: brightness(0.80);
+}
+
+
+/* =====================================================
+   STORY TITLE
+===================================================== */
+
+.story-title {
+    margin-bottom: 35px;
+}
+
+.story-title .section-label {
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.story-title h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   STORY TEXT
+===================================================== */
+
+.about-story > p {
+    max-width: 850px;
+
+    margin: 20px auto;
+
+    color: #cfc8bd;
+
+    font-size: 17px;
+
+    line-height: 2;
+}
+
+
+/* Quran */
+
+.quran-text {
+    display: inline-block;
+
+    color: #e4c39b;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    margin: 15px 0 25px;
+}
+
+
+/* =====================================================
+   SECTION LABEL
+===================================================== */
+
+.section-label {
+    display: block;
+
+    color: #c79256;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   PUBLIC AREA
+   + SILENT AREA
+   + BOARD GAMES
+===================================================== */
+
+.about-feature {
+    max-width: 1150px;
+
+    margin: 0 auto 140px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   FEATURE IMAGE
+===================================================== */
+
+.feature-image {
+    width: 100%;
+
+    height: 450px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.30);
+}
+
+.feature-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.feature-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   FEATURE TEXT
+===================================================== */
+
+.feature-text {
+    text-align: left;
+}
+
+.feature-text h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #ffffff;
+
+    margin: 0 0 25px;
+}
+
+.feature-text p {
+    color: #cfc8bd;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    margin: 0 0 18px;
+}
+
+
+/* =====================================================
+   PUBLIC & SILENT AREA NOTE
+===================================================== */
+
+.area-note {
+    margin-top: 45px;
+
+    padding: 10px 14px;
+
+    max-width: 380px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border-left: 1px solid rgba(199, 146, 86, 0.35);
+}
+
+.area-note span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8f887d;
+
+    font-size: 8px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+}
+
+.area-note p {
+    margin: 0;
+
+    color: #777168;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   REVERSE FEATURE
+===================================================== */
+
+.feature-reverse {
+    grid-template-columns: 1fr 1.1fr;
+}
+
+.feature-reverse .feature-image {
+    order: 2;
+}
+
+.feature-reverse .feature-text {
+    order: 1;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .about-feature {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-bottom: 100px;
+    }
+
+    .feature-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-reverse .feature-image {
+        order: 1;
+    }
+
+    .feature-reverse .feature-text {
+        order: 2;
+    }
+
+    .feature-text h2 {
+        font-size: 36px;
+    }
+
+    .feature-image {
+        height: 400px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .about-feature {
+        gap: 30px;
+
+        margin-bottom: 80px;
+    }
+
+    .feature-image {
+        height: 300px;
+
+        border-radius: 15px;
+    }
+
+    .feature-text h2 {
+        font-size: 32px;
+
+        margin-bottom: 20px;
+    }
+
+    .feature-text p {
+        font-size: 14px;
+
+        line-height: 1.9;
+    }
+
+    .area-note {
+        margin-top: 35px;
+
+        padding: 9px 12px;
+
+        max-width: 100%;
+    }
+
+    .area-note span {
+        font-size: 7px;
+    }
+
+    .area-note p {
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   PRIVATE & TEACHING ROOMS
+===================================================== */
+
+.rooms-section {
+    max-width: 1150px;
+
+    margin: 0 auto 140px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+/* ROOM IMAGES */
+
+.rooms-images {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.room-image {
+    width: 100%;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 80px;
+
+    box-shadow:
+        0 40px 45px rgba(0, 0, 0, 0.30);
+}
+
+.room-image img {
+    width: 50%;
+    
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.room-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ROOMS TEXT */
+
+.rooms-text {
+    text-align: left;
+}
+
+.rooms-text h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+}
+
+.rooms-text p {
+    color: #cfc8bd;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   BOARD GAMES - REVERSE LAYOUT
+===================================================== */
+
+.feature-reverse {
+    grid-template-columns: 1fr 1.1fr;
+}
+
+.feature-reverse .feature-image {
+    order: 2;
+}
+
+.feature-reverse .feature-text {
+    order: 1;
+}
+
+
+/* =====================================================
+   ELEGANT ABOUT → MENU DIVIDER
+===================================================== */
+
+.section-divider {
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: 20px auto 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+/* Divider lines */
+
+.section-divider span {
+    height: 1px;
+
+    flex: 1;
+
+    max-width: 420px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(199, 146, 86, 0.65)
+        );
+}
+
+.section-divider span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            rgba(199, 146, 86, 0.65)
+        );
+}
+
+
+/* Center IRAM circle */
+
+.divider-logo {
+    width: 75px;
+
+    height: 75px;
+
+    border: 1px solid rgba(199, 146, 86, 0.65);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #c79256;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    background: #15130e;
+
+    box-shadow:
+        0 0 0 8px #15130e,
+        0 0 25px rgba(199, 146, 86, 0.12);
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu-section {
+    background: #15130e;
+
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    color: white;
+
+    direction: rtl;
+}
+
+
+/* MENU HEADER */
+
+.menu-header {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.menu-header span {
+    color: #c79256;
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    direction: ltr;
+}
+
+.menu-header h2 {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    margin: 15px 0;
+
+    direction: ltr;
+}
+
+.menu-header p {
+    color: #cfc8bd;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MENU CATEGORIES
+===================================================== */
+
+.menu-categories {
+    display: flex !important;
+
+    justify-content: flex-start !important;
+
+    align-items: center !important;
+
+    flex-wrap: nowrap !important;
+
+    flex-direction: row !important;
+
+    gap: 12px;
+
+    margin-bottom: 80px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    direction: ltr !important;
+
+    text-align: left !important;
+
+    scrollbar-width: none;
+}
+
+
+/* HIDE SCROLLBAR */
+
+.menu-categories::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* MENU CATEGORY BUTTONS */
+
+.menu-categories a {
+    display: inline-flex !important;
+
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+
+    padding: 12px 22px;
+
+    margin: 0 !important;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border: 1px solid #c79256;
+
+    transition: 0.3s;
+
+    white-space: nowrap !important;
+
+    direction: ltr !important;
+
+    text-align: center !important;
+}
+
+.menu-categories a:hover {
+    background: #c79256;
+
+    color: #15130e;
+}
+
+
+/* =====================================================
+   MENU CATEGORY
+===================================================== */
+
+.menu-category {
+    max-width: 1000px;
+
+    margin: 0 auto 80px;
+
+    scroll-margin-top: 100px;
+}
+
+.menu-category h3 {
+    text-align: center;
+
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.menu-line {
+    width: 55px;
+
+    height: 2px;
+
+    background: #c79256;
+
+    margin: 0 auto 35px;
+}
+
+
+/* =====================================================
+   MENU ITEMS
+===================================================== */
+
+.menu-items {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.menu-item {
+    padding: 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* Arabic + price + English */
+
+.menu-item-top {
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* Arabic name */
+
+.menu-item h4 {
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+
+/* Price */
+
+.menu-item .price {
+    color: #c79256;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* English name */
+
+.english-name {
+    color: #aaa398;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    direction: ltr;
+}
+
+
+/* Menu description */
+
+.menu-description {
+    color: #aaa398;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-top: 6px;
+
+    font-weight: normal;
+}
+
+
+/* =====================================================
+   ADDITIONS
+===================================================== */
+
+.additions {
+    max-width: 700px;
+
+    margin: 45px auto 0;
+
+    padding: 30px 35px;
+
+    border-top: 1px solid rgba(199, 146, 86, 0.35);
+
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.additions > h4 {
+    text-align: center;
+
+    color: #c79256;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.addition-item {
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 14px 5px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* Arabic addition */
+
+.addition-item span:first-child {
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+
+/* Price */
+
+.addition-item span:nth-child(2) {
+    color: #c79256;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* English addition */
+
+.addition-item span:last-child {
+    color: #aaa398;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    direction: ltr;
+}
+
+
+/* Last addition */
+
+.addition-item:last-child {
+    border-bottom: none;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+#contact {
+    min-height: 150px;
+
+    background: #15130e;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+        padding: 0 20px;
+
+        height: 70px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-links {
+        gap: 15px;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero-content {
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 70px;
+
+        letter-spacing: 7px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+        padding: 80px 20px;
+    }
+
+
+    /* STORY */
+
+    .about-story {
+        margin-bottom: 100px;
+
+        padding: 0;
+    }
+
+
+    /* STORY IMAGE */
+
+    .story-image {
+        width: 100%;
+
+        height: 400px;
+
+        margin-bottom: 35px;
+
+        border-radius: 25px;
+    }
+
+    .story-image::before {
+        inset: 8px;
+
+        border-radius: 18px;
+    }
+
+    .story-title h2 {
+        font-size: 36px;
+    }
+
+    .about-story > p {
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+
+    .quran-text {
+        font-size: 19px;
+    }
+
+
+    /* =========================
+       PUBLIC AREA
+    ========================= */
+
+    .about-feature {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 100px;
+    }
+
+    .feature-image {
+        height: 300px;
+
+        border-radius: 18px;
+    }
+
+    .feature-text {
+        text-align: center;
+    }
+
+    .feature-text h2 {
+        font-size: 36px;
+    }
+
+    .feature-text p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       ROOMS
+    ========================= */
+
+    .rooms-section {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 100px;
+    }
+
+    .rooms-images {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .room-image {
+        height: 250px;
+
+        border-radius: 15px;
+    }
+
+    .rooms-text {
+        text-align: center;
+    }
+
+    .rooms-text h2 {
+        font-size: 36px;
+    }
+
+    .rooms-text p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       BOARD GAMES
+    ========================= */
+
+    .feature-reverse .feature-image,
+    .feature-reverse .feature-text {
+        order: unset;
+    }
+
+
+    /* =========================
+       DIVIDER
+    ========================= */
+
+    .section-divider {
+        margin: 0 auto 80px;
+
+        gap: 15px;
+
+        padding: 0 20px;
+    }
+
+    .divider-logo {
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* =========================
+       MENU
+    ========================= */
+
+    .menu-section {
+        padding: 100px 20px;
+    }
+
+    .menu-header h2 {
+        font-size: 40px;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-category h3 {
+        font-size: 28px;
+    }
+
+    .menu-item-top {
+        grid-template-columns: 1fr auto;
+    }
+
+    .english-name {
+        grid-column: 1 / -1;
+
+        text-align: right;
+
+        margin-top: 5px;
+    }
+
+
+    /* =========================
+       ADDITIONS MOBILE
+    ========================= */
+
+    .additions {
+        padding: 25px 20px;
+    }
+
+    .addition-item {
+        grid-template-columns: 1fr auto;
+
+        gap: 10px;
+    }
+
+    .addition-item span:last-child {
+        grid-column: 1 / -1;
+
+        text-align: right;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================================
+   SCROLL DOWN
+===================================================== */
+
+.scroll-down {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 35px;
+
+    color: #e4c39b;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* ARROW */
+
+.scroll-arrow {
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 300;
+
+    margin-bottom: 10px;
+
+    animation: scrollArrow 1.8s ease-in-out infinite;
+}
+
+
+/* TEXT */
+
+.scroll-text {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* HOVER */
+
+.scroll-down:hover {
+    color: #ffffff;
+
+    transform: translateY(3px);
+}
+
+
+/* ARROW ANIMATION */
+
+@keyframes scrollArrow {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+}
+
+
+/* =====================================================
+   ROOMS BOOKING
+===================================================== */
+
+.rooms-booking-section {
+    background: #15130e;
+
+    color: #ffffff;
+
+    padding: 120px 8% 140px;
+
+    direction: ltr;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.rooms-booking-header {
+    max-width: 850px;
+
+    margin: 0 auto 90px;
+
+    text-align: center;
+}
+
+.rooms-booking-header h2 {
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    font-weight: normal;
+
+    margin: 10px 0 20px;
+
+    color: #ffffff;
+}
+
+.rooms-booking-header p {
+    color: #cfc8bd;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   ROOM CARD
+========================= */
+
+.booking-room {
+    max-width: 1150px;
+
+    margin: 0 auto 100px;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   REVERSE ROOM
+========================= */
+
+.booking-room-reverse {
+    grid-template-columns: 1fr 1.15fr;
+}
+
+.booking-room-reverse .booking-room-image {
+    order: 2;
+}
+
+.booking-room-reverse .booking-room-info {
+    order: 1;
+}
+
+
+/* =========================
+   ROOM IMAGE
+========================= */
+
+.booking-room-image {
+    height: 470px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.40);
+
+    border: 1px solid rgba(199, 146, 86, 0.25);
+}
+
+.booking-room-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.booking-room-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   ROOM INFORMATION
+========================= */
+
+.booking-room-info {
+    text-align: left;
+}
+
+.room-number {
+    color: #c79256;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+}
+
+.booking-room-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin: 12px 0 20px;
+
+    color: #ffffff;
+}
+
+.room-description {
+    color: #cfc8bd;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   ROOM DETAILS
+========================= */
+
+.room-details {
+    display: flex;
+
+    gap: 45px;
+
+    margin-bottom: 35px;
+}
+
+.room-detail {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.detail-icon {
+    width: 42px;
+
+    height: 42px;
+
+    border: 1px solid rgba(199, 146, 86, 0.6);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #c79256;
+
+    font-size: 12px;
+}
+
+.room-detail small {
+    display: block;
+
+    color: #8f887d;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.room-detail strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   BOOK BUTTON
+========================= */
+
+.room-book-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid #c79256;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.room-book-button:hover {
+    background: #c79256;
+
+    color: #15130e;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .rooms-booking-section {
+        padding: 90px 20px 100px;
+    }
+
+    .rooms-booking-header {
+        margin-bottom: 60px;
+    }
+
+    .rooms-booking-header h2 {
+        font-size: 38px;
+    }
+
+    .rooms-booking-header p {
+        font-size: 15px;
+    }
+
+    .booking-room,
+    .booking-room-reverse {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 80px;
+    }
+
+    .booking-room-image {
+        height: 300px;
+
+        order: unset !important;
+    }
+
+    .booking-room-info {
+        order: unset !important;
+
+        text-align: center;
+    }
+
+    .booking-room-info h3 {
+        font-size: 34px;
+    }
+
+    .room-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .room-details {
+        justify-content: center;
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =====================================================
+   IRAM — CONTACT SECTION
+===================================================== */
+
+.contact-section {
+    width: 100%;
+
+    padding: 110px 8%;
+
+    background: #15130e;
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
+
+.contact-wrapper {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.contact-intro {
+    padding-right: 30px;
+}
+
+.contact-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #c79256;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.contact-intro h2 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    font-weight: normal;
+
+    line-height: 1.12;
+}
+
+.contact-intro p {
+    max-width: 450px;
+
+    margin: 0 0 30px;
+
+    color: #cfc8bd;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   LOCATION BUTTON
+===================================================== */
+
+.contact-location-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 20px;
+
+    background: #c79256;
+
+    color: #15130e;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+
+.contact-location-button span {
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+.contact-location-button:hover {
+    background: #e4c39b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CONTACT DETAILS
+===================================================== */
+
+.contact-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =====================================================
+   CONTACT CARD
+===================================================== */
+
+.contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-height: 105px;
+
+    padding: 20px;
+
+    background: #211d15;
+
+    border: 1px solid rgba(199, 146, 86, 0.20);
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    background: #282219;
+
+    border-color: rgba(199, 146, 86, 0.55);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.contact-card-icon {
+    width: 45px;
+
+    height: 45px;
+
+    min-width: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #15130e;
+
+    border: 1px solid rgba(199, 146, 86, 0.40);
+
+    border-radius: 50%;
+
+    color: #c79256;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.contact-card-content {
+    min-width: 0;
+}
+
+.contact-card-content span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #c79256;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.contact-card-content h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+.contact-card-content small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #aaa398;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   OPENING HOURS
+===================================================== */
+
+.contact-hours {
+    cursor: default;
+}
+
+.contact-hours:hover {
+    background: #282219;
+
+    transform: none;
+
+    box-shadow: none;
+
+    border-color: rgba(199, 146, 86, 0.20);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        padding: 90px 6%;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .contact-intro {
+        padding-right: 0;
+
+        text-align: center;
+    }
+
+    .contact-intro p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .contact-details {
+        max-width: 700px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 75px 20px;
+    }
+
+    .contact-intro h2 {
+        font-size: 40px;
+    }
+
+    .contact-intro p {
+        font-size: 14px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .contact-card {
+        min-height: 90px;
+
+        padding: 17px;
+    }
+
+    .contact-card-icon {
+        width: 42px;
+
+        height: 42px;
+
+        min-width: 42px;
+    }
+}
+/* =====================================================
+   LANGUAGE BUTTON
+===================================================== */
+
+.language-toggle {
+    background: transparent;
+
+    border: 1px solid #c79256;
+
+    color: #ffffff;
+
+    padding: 9px 16px;
+
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    font-family: Arial, sans-serif;
+}
+
+.language-toggle:hover {
+    background: #c79256;
+
+    color: #15130e;
+}
+
+
+/* =====================================================
+   ARABIC MODE
+===================================================== */
+
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+html[dir="rtl"] body {
+    direction: rtl;
+}
+
+
+/* Navbar stays visually organized */
+
+html[dir="rtl"] .nav-links {
+    direction: rtl;
+}
+
+
+/* Arabic menu */
+
+html[dir="rtl"] .menu-section {
+    direction: rtl;
+}
+
+html[dir="rtl"] .menu-categories {
+    direction: rtl;
+    justify-content: flex-start;
+    text-align: right;
+}
+
+html[dir="rtl"] .menu-categories a {
+    direction: rtl;
+}
+
+
+/* Arabic menu item layout */
+
+html[dir="rtl"] .menu-item-top {
+    direction: rtl;
+}
+
+html[dir="rtl"] .english-name {
+    direction: rtl;
+    text-align: right;
+}
+
+
+/* Mobile language button */
+
+@media (max-width: 768px) {
+
+    .language-toggle {
+        padding: 7px 12px;
+
+        font-size: 11px;
+    }
+
+}
+/* =====================================================
+   LANGUAGE SWITCHER
+===================================================== */
+
+.language-toggle {
+    position: relative;
+    width: 105px;
+    height: 38px;
+
+    border: 1px solid rgba(199, 146, 86, 0.7);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+
+    padding: 0;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+
+/* النصوص */
+
+.language-toggle .lang-option {
+    position: relative;
+    z-index: 3;
+
+    width: 50%;
+    text-align: center;
+
+    transition: 0.35s ease;
+}
+
+
+/* الخط الفاصل */
+
+.language-toggle .lang-divider {
+    position: absolute;
+
+    width: 1px;
+    height: 16px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    transition: 0.35s ease;
+}
+
+
+/* الدائرة / المؤشر المتحرك */
+
+.language-toggle .lang-slider {
+    position: absolute;
+
+    width: 48px;
+    height: 30px;
+
+    border-radius: 50px;
+
+    background: #c79256;
+
+    left: 3px;
+    top: 3px;
+
+    z-index: 1;
+
+    transition: 0.4s ease;
+}
+
+
+/* اللون في الوضع الإنجليزي */
+
+.language-toggle .lang-en {
+    color: #15130e;
+}
+
+
+/* عند العربية */
+
+html[dir="rtl"] .language-toggle .lang-slider {
+    left: 52px;
+}
+
+html[dir="rtl"] .language-toggle .lang-ar {
+    color: #15130e;
+}
+
+html[dir="rtl"] .language-toggle .lang-en {
+    color: #ffffff;
+}
+
+html[dir="rtl"] .language-toggle .lang-divider {
+    opacity: 0;
+}
+
+
+/* Hover */
+
+.language-toggle:hover {
+    border-color: #c79256;
+    transform: translateY(-1px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .language-toggle {
+        width: 92px;
+        height: 34px;
+        font-size: 11px;
+    }
+
+    .language-toggle .lang-slider {
+        width: 41px;
+        height: 27px;
+        top: 3px;
+        left: 3px;
+    }
+
+    html[dir="rtl"] .language-toggle .lang-slider {
+        left: 46px;
+    }
+}
+
+
+/* =====================================================
+   ARABIC WEBSITE
+===================================================== */
+
+html[dir="rtl"] body {
+    direction: rtl;
+}
+
+html[dir="rtl"] .nav-links {
+    direction: rtl;
+}
+
+html[dir="rtl"] .menu-section {
+    direction: rtl;
+}
+
+html[dir="rtl"] .menu-categories {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .menu-categories a {
+    direction: rtl;
+}
+
+html[dir="rtl"] .menu-item-top {
+    direction: rtl;
+}
+
+html[dir="rtl"] .menu-description {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .contact-wrapper {
+    direction: rtl;
+}
+
+html[dir="rtl"] .contact-details {
+    direction: rtl;
+}
+
+html[dir="rtl"] .room-details {
+    direction: rtl;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
+html[dir="rtl"] body,
+html[dir="rtl"] button,
+html[dir="rtl"] a,
+html[dir="rtl"] p,
+html[dir="rtl"] span,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4 {
+    font-family: "Cairo", "Tahoma", sans-serif;
+}
+
+html[dir="rtl"] .nav-links {
+    font-family: "Cairo", "Tahoma", sans-serif;
+}
+
+html[dir="rtl"] .menu-section,
+html[dir="rtl"] .rooms-booking-section,
+html[dir="rtl"] .contact-section {
+    font-family: "Cairo", "Tahoma", sans-serif;
+}
+/* ===== IRAM GOLD DIVIDER ===== */
+
+.iram-divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 45px 20px;
+    box-sizing: border-box;
+}
+
+.iram-divider > span {
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c79256,
+        transparent
+    );
+}
+
+.iram-divider-circle {
+    width: 72px;
+    height: 72px;
+    border: 1.5px solid #c79256;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 18px rgba(199, 146, 86, 0.15);
+}
+
+.iram-divider-circle::before {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border: 1px solid rgba(199, 146, 86, 0.35);
+    border-radius: 50%;
+}
+
+.iram-divider-circle span {
+    color: #c79256;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
